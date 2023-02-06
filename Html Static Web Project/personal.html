@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information Form</title>
+    <script src="https://kit.fontawesome.com/20386a9352.js" crossorigin="anonymous"></script>
+    <style>
+        h3{
+            text-align: center;
+            color: red;
+        }
+        .container{
+            background-color: greenyellow;
+            border: 2px solid purple;
+        }
+        #Button{
+            color: white;
+            background-color: orange;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <form action="">
+        <table align="center";>
+            <h3>Personal Details</h3>
+            <tr>
+                <td>
+                    <label for="name">Name :</label>
+                
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="password">Password:</label>
+                
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">E-mail id:</label>
+                
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="gender">Gender:</label>
+                
+                    <input type="radio"> Male
+                    <input type="radio"> Female
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="contact">Contact:</label>
+                
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <h3>Educational Qualification</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="degree">Degree:</label>
+               
+                    <select name="text" id="">
+                        <option value="">-- Select Group --</option>
+                        <option value="None">B.tech</option>
+                        <option value="None">B.A</option>
+                        <option value="None">B.com</option>
+                        <option value="None">B.sc</option>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="engineering">Engineering:</label>
+                
+                    <select name="text" id="">
+                        <option value="">-- Select Group --</option>
+                        <option value="None">Civil</option>
+                        <option value="None">Mech.</option>
+                        <option value="None">CSE</option>
+                        <option value="None">Electrical</option>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                   Hobbies: <input type="checkbox">
+                   Playing chess <input type="checkbox">
+                   Reading Books <input type="checkbox">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Address</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <textarea name="" id="" cols="40" rows="4"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="attch">Attch Resume:</label>
+               
+                    <button type="button" id="custom-button">Choose file</button>
+                    <span id="custom-text">No file chosen</span>
+                </td>
+            </tr>
+            <tr>
+                <td>   <button id="Button" style="text-align: center; margin-left: 60px; border: 2px solid orange;">SUBMIT<span>  <i class="fa-solid fa-circle-arrow-right"></i></span></button>
+                    </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
