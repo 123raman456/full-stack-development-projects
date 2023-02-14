@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/20386a9352.js" crossorigin="anonymous"></script>
+    <style>
+   .container-fluid{
+    height: 500px;
+    width: 400px;
+    position: absolute;
+    background-color: aliceblue;
+    margin: 20px;
+   }
+   form{
+    height: 450px;
+    width: 350px;
+    background-color: whitesmoke;
+    
+    margin-top: 20px;
+    position: absolute;
+    margin-left: 10px;
+   }
+   img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 18px rgb(0, 0, 20);
+    margin-right: 10px;
+   }
+   form input{
+    width: 85%;
+    margin-left: 10px;
+    border-radius: 4px;
+    border: none;
+    height: 8%;
+   }
+   form label{
+    margin-left: 10px;
+   }
+   #btn{
+   border-radius: 8px;
+   float:right;
+   transition: 1s;
+   color: white;
+   cursor: pointer;
+   padding: 0 30px;
+   }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+<form action="submited.html" name="rForm" id="myForm">
+    <h3 style="margin: 10px;"> <img src="https://cdn.pixabay.com/photo/2019/12/06/15/12/boxing-4677527__340.jpg" alt="" >Raman Academy</h3>
+<label for="name">Username</label><br>
+<input type="text" placeholder="user" id="name" onclick="resetBtn()" maxlength="30"> <br> <br>
+<label for="text">Email</label> <br>
+<input type="text" placeholder="user" onclick="resetBtn()" id="email"> <br> <br>
+<label for="text">Password</label> <br>
+<input type="password" placeholder="Enter password" id="pass" minlength="8" onclick="resetBtn()" name="password"> <br> <br>
+<label for="text">Confirm Password</label> <br>
+<input type="password" placeholder="Enter password again" id="pass" minlength="8" onclick="resetBtn()" name="password2"> <br> <br>
+<button type="submit" id="btn" class="bg-primary" onmouseover="changePosition()">Submit</button>
+</form>
+    </div>
+    <script>
+let a=0;
+function  changePosition(){
+    let name= document.rForm.name.value;
+    let email= document.rForms.email.value;
+    let firstPass= document.rForms.password.value;
+let secondPass=document.rForm.password2.value;
+let emailcheck=/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+if(firstPass == secondPass){
+    return true;
+} else{
+    alert("password must be same");
+    return false;
+}
+ if(name ==""||!email.match(emailcheck)&& a==0){
+    buttonMoveLeft();
+    a=1;
+    return false;
+ }
+ if(name ==""||!email.match(emailcheck)&& a==1){
+    buttonMoveRight();
+    a=2;
+    return false;
+ }
+ if(name ==""||!email.match(emailcheck)&& a==2){
+    buttonMoveLeft();
+    a=1;
+    return false;
+ }
+ else{
+    document.getElementById("btn").style.cursor="pointer";
+    return false;
+ }
+}
+
+function buttonMoveLeft(){
+    let button = document.getElementById("btn");
+    button.style.transform="translateX(-120%)";
+}
+function buttonMoveRight(){
+    let button = document.getElementById("btn");
+    button.style.transform="translateX(20%)";
+}
+function resetBtn(){
+    let button = document.getElementById("btn");
+    button.style.transform="translateX(0)";
+}
+    </script>
+</body>
+</html>
